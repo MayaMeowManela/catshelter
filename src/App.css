@@ -1,0 +1,205 @@
+:root {
+  --bg-primary: #fff9f5;
+  --bg-card: #ffffff;
+  --accent-soft: #ff8c94;
+  --accent-deep: #ff5e6c;
+  --health-good: #a8e6cf;
+  --health-bad: #ffd3b6;
+  --text-main: #4a4e69;
+  --text-muted: #9a8c98;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title-group h1 {
+  margin: 0;
+  color: var(--accent-deep);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-sparkle { color: #f9d423; }
+
+.stats-bar {
+  display: flex;
+  gap: 1rem;
+}
+
+.stat-pill {
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.money { color: #2ecc71; }
+.capacity { color: #3498db; }
+
+.game-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+}
+
+.action-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.btn-primary {
+  background: var(--accent-deep);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.1s;
+}
+
+.btn-primary:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.1); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.upgrade-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--accent-soft);
+  background: transparent;
+  color: var(--accent-deep);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary:disabled { border-color: #eee; color: #ccc; }
+
+.cat-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-content: start;
+}
+
+.cat-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 4px solid #eee;
+}
+
+.cat-card:hover { transform: translateY(-4px); }
+
+.cat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cat-info h3 { margin: 0; font-size: 1.25rem; }
+.cat-info span { color: var(--text-muted); font-size: 0.9rem; }
+
+.status-badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-resting { border-bottom-color: #ffd3b6; }
+.status-hospitalized { border-bottom-color: #3498db; }
+.status-healthy { border-bottom-color: var(--health-good); }
+
+.badge-resting { background: #fff3e0; color: #e67e22; }
+.badge-hospitalized { background: #e3f2fd; color: #1976d2; }
+.badge-healthy { background: #e8f5e9; color: #2e7d32; }
+
+.health-section { display: flex; flex-direction: column; gap: 0.5rem; }
+.health-header { display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; }
+
+.progress-bar {
+  background: #f0f0f0;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-soft), var(--accent-deep));
+  transition: width 0.5s ease;
+}
+
+.btn-action {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-action.treat { background: #e3f2fd; color: #1976d2; }
+.btn-action.adopt { background: #e8f5e9; color: #2e7d32; }
+
+.treating-indicator {
+  text-align: center;
+  color: #3498db;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem;
+  color: var(--text-muted);
+}
+
+.spin { animation: spin 2s linear infinite; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
