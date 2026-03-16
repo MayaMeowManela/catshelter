@@ -1,20 +1,27 @@
-# Cat Shelter (React Simulation)
+# 🐾 Cat Shelter (Interactive Simulation)
 
-A cozy management game where you rescue hurt cats, provide medical care, and find them loving forever homes.
+A cozy, hands-on management game where you rescue, heal, and love cats until they are ready for their forever homes. 
 
-## Features
-- **Real-time Simulation:** Cats heal gradually when placed in medical care.
-- **Rescue System:** Intake cats with varying health conditions and breeds.
-- **Shelter Upgrades:** Reinvest adoption fees to expand your shelter's capacity.
-- **Cozy UI:** Built with a soft, pastel aesthetic and interactive feedback.
+**Play now on GitHub Pages:** [https://mayameowmanela.github.io/catshelter/](https://mayameowmanela.github.io/catshelter/)
 
-## Tech Stack
+## ✨ Key Features
+
+- **Physical Care Mechanics:** Don't just click—**scrub** away dirt with a sponge and **spread** ointment over wounds using your mouse or touch.
+- **Love & Affection:** Cats need more than just medicine! Use the **Petting Tool** to fill their affection meter with hearts and purrs.
+- **Shelter Shop & Upgrades:** Earn money from successful adoptions to:
+  - **Expand Capacity:** Buy more beds to rescue more cats.
+  - **Upgrade Tools:** Level up your Sponge, Ointment, and Food to work faster and more effectively.
+- **Dynamic SVG Graphics:** Each cat has a unique breed and color, with real-time visual feedback for dirt, bandages, and happiness.
+- **Mobile Friendly:** Full touch support and a responsive layout for playing on any device.
+
+## 🛠️ Tech Stack
+
 - **React 19 + TypeScript**
-- **Vite**
-- **Lucide-React** for icons
-- **Vanilla CSS** for custom styling
+- **Vite** for lightning-fast development and builds.
+- **Lucide-React** for beautiful, consistent iconography.
+- **Vanilla CSS** for high-performance animations and glass-morphism UI.
 
-## Getting Started
+## 🚀 Getting Started
 
 1.  **Install Dependencies:**
     ```bash
@@ -26,7 +33,14 @@ A cozy management game where you rescue hurt cats, provide medical care, and fin
     npm run dev
     ```
 
-3.  **Build for Production:**
+3.  **Deploy to GitHub Pages:**
     ```bash
-    npm run build
+    npm run deploy
     ```
+
+## 🎮 How to Play
+
+1.  **Rescue:** Click "Rescue a Cat" to bring a new friend into a free bed.
+2.  **Select Tool:** Choose a tool from the bottom toolbar (Wash, Pet, Heal, or Feed).
+3.  **Care:** Hold your mouse button (or finger on mobile) and **move it back and forth** over the cat to perform the action.
+4.  **Adopt:** Once all meters (Health, Love, Cleanliness) are full, the "Rehome" button will appear!
